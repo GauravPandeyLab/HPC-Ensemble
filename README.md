@@ -3,9 +3,10 @@
 	cd spark/
 
 ## Setup
-HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the pipeline itself (by prem).  
+HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the pipeline itself (by Prem).  
 ### Download JAVA8 to current folder.
 Run:
+
 	sh set_java_path.sh
 
 ### Run experiments
