@@ -51,4 +51,24 @@ To get memory usage and computational time:
 	
 	python minerva_memory_time.py [stdout_path] [arff_path] [data_name]
 
+# Analysis
+1. Computational time 
+	i. Use notebook visualize_time.ipynb to analyze computaitonal time.
+	ii. Minerva time usage is saved in [GDrive]/final_results/minerva-all-usage.csv.
+	iii. PDF for all time usage is saved in [GDrive]/final_results/computational_time.pdf
+	iv. PNGs for individual data time usage are saved in [GDrive]/final_results/individual_data_time/ folder.
 
+2. Disk usage 
+	i. Minerva disk usage is manually calculated using linux du -hs command.
+	ii. Spark disk usage is calculated using 'hdfs dfs -ls -R' command.
+	iii. Jupyter notebook disk_usage.ipynb is used to generate the barplot.
+	iv. Plot saved as [GDrive]/final_results/disk_usage_barplot.png. 
+
+3. Memory usage 
+	i. average memory plot.ipynb plot the average memory of both platforms.
+	ii. For Minerva, raw data is saved in final_results/minerva-all-usage.csv, unit is MB. Plot is saved as [GDrive]/final_results/minerva_avemem.pdf.
+	iii. For Spark, raw data is saved in Spark/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. Plot is saved as [GDrive]/final_results/spark_avemem.png.
+	
+4. Classifiers
+	i. For Minerva, classifiers and parameters are saved in classifiers.txt.
+	ii. Spark classifiers are corresponding classifiers from the mllib.
