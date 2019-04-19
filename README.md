@@ -37,7 +37,7 @@ and answer the questions as poped up in the terminal.
 	cd minerva/
 
 ## Setup
-Install LargeGOPred ().
+Install LargeGOPred (https://github.com/linhuawang/LargeGOPred).
 
 ### Run experiments
 Run LargeGOPred for all data, core, round of experiments.
