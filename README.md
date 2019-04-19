@@ -20,7 +20,7 @@ To run spark on HDFS for data with specified number of cores:
 This will generate the mprof file which contains the memory usage per second. Elapsed time and CPU time can be obtained from mprof files.
 Elapsed time will also be generated via python time package and written into TimeCal folder. 
 
-### Analysis
+### Process results
 To get disk usage:
 	
 	sh get_disk_usage.sh
@@ -42,7 +42,7 @@ Install LargeGOPred (https://github.com/linhuawang/LargeGOPred).
 ### Run experiments
 Run LargeGOPred for all data, core, round of experiments.
 
-### Analysis
+### Process results
 To get disk usage:
 
 	python minerva_disk.py [data_path] [data_name]
@@ -68,7 +68,7 @@ To get memory usage and computational time:
 	i. average memory plot.ipynb plot the average memory of both platforms.
 	ii. For Minerva, raw data is saved in final_results/minerva-all-usage.csv, unit is MB. Plot is saved as [GDrive]/final_results/minerva_avemem.pdf.
 	iii. For Spark, raw data is saved in Spark/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. Plot is saved as [GDrive]/final_results/spark_avemem.png.
-	
+
 4. Classifiers
 	i. For Minerva, classifiers and parameters are saved in classifiers.txt.
 	ii. Spark classifiers are corresponding classifiers from the mllib.
