@@ -58,21 +58,21 @@ To get memory usage and computational time:
 
 1. Computational time 
 
-	i. Use notebook "Computational time.ipynb" to analyze computaitonal time.
-	ii. Minerva time usage is saved in: Minerva_results/minerva-all-usage.csv.
-	iii. PNGs for all time usage is saved in Minerva_results/individual_data_time.
-	iv. PDFs for figure in the paper is saved at paper_figures/Figure_2a/b.pdf.
+	i. Use notebook "Computational time.ipynb" to analyze computaitonal time.  
+	ii. Minerva time usage is saved in: Minerva_results/minerva-all-usage.csv.  
+	iii. PNGs for all time usage is saved in Minerva_results/individual_data_time.  
+	iv. PDFs for figure in the paper is saved at paper_figures/Figure_2a/b.pdf.  
 
 2. Disk usage 
-	i. Minerva disk usage is manually calculated using linux du -hs command.
-	ii. Demeter disk usage is calculated using 'hdfs dfs -ls -R' command.
-	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the barplot.
-	iv. Plot saved in paper_figures/Figure3_disk_usage.pdf. 
+	i. Minerva disk usage is manually calculated using linux du -hs command.  
+	ii. Demeter disk usage is calculated using 'hdfs dfs -ls -R' command.  
+	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the barplot.  
+	iv. Plot saved in paper_figures/Figure3_disk_usage.pdf.   
 
 3. Memory usage 
-	i. For Minerva, raw data is saved in Minerva_results/minerva-all-usage.csv, unit is MB. Plot is saved as paper_results/Figure_4a_Minerva_memory.pdf.
-	ii. For Demeter, raw data is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. Plot is saved as paper_results/Figure_4b_Demeter_memory.pdf.
+	i. For Minerva, raw data is saved in Minerva_results/minerva-all-usage.csv, unit is MB. Plot is saved as paper_results/Figure_4a_Minerva_memory.pdf.  
+	ii. For Demeter, raw data is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.  csv, unit is MB. Plot is saved as paper_results/Figure_4b_Demeter_memory.pdf.  
 
 4. Classifiers
-	i. For Minerva, classifiers and parameters are saved in classifiers.txt.
-	ii. Spark classifiers are corresponding classifiers from the mllib.
+	i. For Minerva, classifiers and parameters are saved in classifiers.txt.  
+	ii. Spark classifiers are corresponding classifiers from the mllib.  
