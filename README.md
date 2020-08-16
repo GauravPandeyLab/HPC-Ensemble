@@ -1,6 +1,6 @@
-# Spark
+# Run ensemble models on Demeter Hadoop
 
-	cd spark/
+	cd Process/Demeter
 
 ## Setup
 HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the pipeline itself (by Prem).  
@@ -33,9 +33,9 @@ To check if job finished for data, core, date:
 and answer the questions as poped up in the terminal.
 
 
-# Minerva
+# Run ensembles on Minerva
 
-	cd minerva/
+	cd Process/Minerva/
 
 ## Setup
 Install LargeGOPred (https://github.com/linhuawang/LargeGOPred).
@@ -53,22 +53,25 @@ To get memory usage and computational time:
 	python minerva_memory_time.py [stdout_path] [arff_path] [data_name]
 
 # Analysis
+
+	cd Analysis/
+
 1. Computational time 
-	i. Use notebook visualize_time.ipynb to analyze computaitonal time.
-	ii. Minerva time usage is saved in [GDrive]/final_results/minerva-all-usage.csv.
-	iii. PDF for all time usage is saved in [GDrive]/final_results/computational_time.pdf
-	iv. PNGs for individual data time usage are saved in [GDrive]/final_results/individual_data_time/ folder.
+
+	i. Use notebook "Computational time.ipynb" to analyze computaitonal time.
+	ii. Minerva time usage is saved in: Minerva_results/minerva-all-usage.csv.
+	iii. PNGs for all time usage is saved in Minerva_results/individual_data_time.
+	iv. PDFs for figure in the paper is saved at paper_figures/Figure_2a/b.pdf.
 
 2. Disk usage 
 	i. Minerva disk usage is manually calculated using linux du -hs command.
-	ii. Spark disk usage is calculated using 'hdfs dfs -ls -R' command.
-	iii. Jupyter notebook disk_usage.ipynb is used to generate the barplot.
-	iv. Plot saved as [GDrive]/final_results/disk_usage_barplot.png. 
+	ii. Demeter disk usage is calculated using 'hdfs dfs -ls -R' command.
+	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the barplot.
+	iv. Plot saved in paper_figures/Figure3_disk_usage.pdf. 
 
 3. Memory usage 
-	i. average memory plot.ipynb plot the average memory of both platforms.
-	ii. For Minerva, raw data is saved in final_results/minerva-all-usage.csv, unit is MB. Plot is saved as [GDrive]/final_results/minerva_avemem.pdf.
-	iii. For Spark, raw data is saved in Spark/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. Plot is saved as [GDrive]/final_results/spark_avemem.png.
+	i. For Minerva, raw data is saved in Minerva_results/minerva-all-usage.csv, unit is MB. Plot is saved as paper_results/Figure_4a_Minerva_memory.pdf.
+	ii. For Demeter, raw data is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. Plot is saved as paper_results/Figure_4b_Demeter_memory.pdf.
 
 4. Classifiers
 	i. For Minerva, classifiers and parameters are saved in classifiers.txt.
