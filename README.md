@@ -3,7 +3,8 @@
 	cd Process/Demeter
 
 ## Setup
-HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the pipeline itself (by Prem).  
+HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the pipeline itself (by Prem). Implementation scripts of Datasink (heterogeneous ensemble models) are in Process/Demeter/Datasink_Hadoop folder.
+
 ### Download JAVA8 to current folder.
 Run:
 
