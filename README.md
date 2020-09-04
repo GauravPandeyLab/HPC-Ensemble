@@ -55,9 +55,11 @@ To get memory usage and computational time:
 
 # Example data
 
-The example data for both platforms are saved in Process/ExampleData folder. 
-File pf1.csv is an example input for our heterogeneous ensemble models on Demeter. 
-File pf1.arff is an example input for LargeGOPred, which is Minerva platform based. 
+The example data for both platforms are saved in Process/ExampleData folder.	
+
+1. File pf1.csv is an example input for our heterogeneous ensemble models on Demeter. 	
+
+2. File pf1.arff is an example input for LargeGOPred, which is Minerva platform based. 	
 
 # Analysis
 
