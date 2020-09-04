@@ -53,6 +53,12 @@ To get memory usage and computational time:
 	
 	python minerva_memory_time.py [stdout_path] [arff_path] [data_name]
 
+# Example data
+
+The example data for both platforms are saved in Process/ExampleData folder. 
+File pf1.csv is an example input for our heterogeneous ensemble models on Demeter. 
+File pf1.arff is an example input for LargeGOPred, which is Minerva platform based. 
+
 # Analysis
 
 	cd Analysis/
