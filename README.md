@@ -1,3 +1,5 @@
+Below, we provide code and instructions for running our heterogeneous ensemble frameworks on Hadoop and traditional high-performance computing platforms, as well as evaluating their computational performance. 
+
 # Run ensemble models on Hadoop
 
 This code was developed for our local Demeter Hadoop cluster. Users are recommended to adapt the code for their own systems.
@@ -6,49 +8,51 @@ Start with:
 
 	cd Process/Demeter
 
-## Setup
-HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the Hadoop ensemble pipeline itself. Scripts implementing the  Datasink framework for developing heterogeneous ensemble models are available in the Process/Demeter/Datasink_Hadoop folder. An example dataset for testing the code is available in Process/ExampleData/. Other data will be available upon request.
+### Setup
+HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the Hadoop ensemble pipeline itself. Scripts implementing the  Datasink framework for developing heterogeneous ensemble models are available in the Process/Demeter/Datasink_Hadoop folder. 
 
-### Download JAVA8 to current folder.
+### Download JAVA8 to current folder
 Run:
 
 	sh set_java_path.sh
 
-### Run experiments
+### To run the experiments in our study
+An example dataset for testing the code is available as Process/ExampleData/pf1.csv. Other datasets used in our study are available upon request.
+
 Place data on hdfs:
 
 	hdfs fs -put [DATA.csv] [HDFS_PATH]
 	
-To run spark on HDFS for data with specified number of cores:
+To run the Hadoop DataSink version, implemented in Spark, with the specified number of cores:
 
-	mprof run --include-children python sparkSubmitYarn.py [core] [data_name] 
+	mprof run --include-children python sparkSubmitYarn.py [#cores] [data_name] 
 
-This will generate the mprof file which contains the memory usage per second. Elapsed time and CPU time can be obtained from mprof files.
-Elapsed time will also be generated via python time package and written into TimeCal folder. 
+### To generate computational performance statistics
+The above command will generate the mprof file, which contains the memory usage per second. Elapsed time and CPU time can be obtained from this file.
+Elapsed time will also be generated via python time package and written into the TimeCal folder. 
 
-### Process results
 To get disk usage:
 	
 	sh get_disk_usage.sh
 
-To check if job finished for data, core, date:
+# Run ensembles on a traditional high-performance computing (HPC) system
 
-	python checkResults.py
+Again, this code was developed for our local Minerva HPC system (https://labs.icahn.mssm.edu/minervalab/). Users are recommended to adapt the code for their own systems.
 
-and answer the questions as poped up in the terminal.
-
-
-# Run ensembles on Minerva
+Start with:
 
 	cd Process/Minerva/
 
-## Setup
-Install LargeGOPred (https://github.com/linhuawang/LargeGOPred).
+### Setup
+Install LargeGOPred (https://github.com/linhuawang/LargeGOPred), which is an implementation of the DataSink framework designed to run on large-scale traditional HPC systems like Minerva.
 
-### Run experiments
-Run LargeGOPred for all data, core, round of experiments.
+### To run experiments in our study
+Follow the instructions of LargeGOPred to run it for the dataset under consideration. An example dataset for testing the code is available as Process/ExampleData/pf1.csv. Other datasets used in our study are available upon request.
 
-### Process results
+### To generate computational performance statistics
+
+Run the following commands to get the basic computational performance statistics.
+
 To get disk usage:
 
 	python minerva_disk.py [data_path] [data_name]
@@ -57,23 +61,20 @@ To get memory usage and computational time:
 	
 	python minerva_memory_time.py [stdout_path] [arff_path] [data_name]
 
-# Example data
 
-The example data for both platforms are saved in Process/ExampleData folder.	
+# Computational performance analysis and result visualization code
 
-1. File pf1.csv is an example input for our heterogeneous ensemble models on Demeter. 	
+The following code can be used to process the basic computational performance statistics calculated for Hadoop and traditional HPC systems, and generate the results and figures included in our paper.
 
-2. File pf1.arff is an example input for LargeGOPred, which is Minerva platform based. 	
-
-# Analysis
+Start with:
 
 	cd Analysis/
 
 1. Computational time 
 
-	i. Use notebook "Computational time.ipynb" to analyze computaitonal time.  
+	i. Use notebook "Computational time.ipynb" to analyze computational time.  
 	ii. Minerva time usage is saved in: Minerva_results/minerva-all-usage.csv.  
-	iii. PNGs for all time usage is saved in Minerva_results/individual_data_time.  
+	iii. PDFs for all time usage is saved in Minerva_results/individual_data_time.  
 	iv. PDFs for figure in the paper is saved at paper_figures/Figure_2a/b.pdf.  
 
 2. Disk usage 
@@ -87,8 +88,13 @@ The example data for both platforms are saved in Process/ExampleData folder.
 
 	i. For Minerva, raw data is saved in Minerva_results/minerva-all-usage.csv, unit is MB. Plot is saved as paper_results/Figure_4a_Minerva_memory.pdf.  
 	ii. For Demeter, raw data is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.  csv, unit is MB. Plot is saved as paper_results/Figure_4b_Demeter_memory.pdf.  
+	
+Sample result files for the example dataset, as well as the corresponding result figures included in our paper, are available in the Analysis directory.
 
-4. Classifiers
+### Contact
 
-	i. For Minerva, classifiers and parameters are saved in classifiers.txt.  
-	ii. Spark classifiers are corresponding classifiers from the mllib.  
+Please submit any issues with the code to Prem Timsina (prem.timsina@mssm.edu), Linhua Wang (linhuaw15213@gmail.com) and Gaurav Pandey (gaurav.pandey@mssm.edu).
+
+### Reference
+
+Forthcoming.
