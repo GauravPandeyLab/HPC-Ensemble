@@ -1,4 +1,8 @@
-# Run ensemble models on Demeter Hadoop
+# Run ensemble models on Hadoop
+
+This code was developed for our local Demeter Hadoop cluster. Users are recommended to adapt the code for their own systems.
+
+Start with
 
 	cd Process/Demeter
 
