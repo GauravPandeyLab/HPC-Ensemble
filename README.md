@@ -2,12 +2,12 @@
 
 This code was developed for our local Demeter Hadoop cluster. Users are recommended to adapt the code for their own systems.
 
-Start with
+Start with:
 
 	cd Process/Demeter
 
 ## Setup
-HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the pipeline itself (by Prem). Implementation scripts of Datasink (heterogeneous ensemble models) are in Process/Demeter/Datasink_Hadoop folder. Example data is provided at Process/ExampleData/. Other data will be provided upon request.
+HDFS configurations are saved in new-gc.conf. Jars include the Machine Learning libraries and also the Hadoop ensemble pipeline itself. Scripts implementing the  Datasink framework for developing heterogeneous ensemble models are available in the Process/Demeter/Datasink_Hadoop folder. An example dataset for testing the code is available in Process/ExampleData/. Other data will be available upon request.
 
 ### Download JAVA8 to current folder.
 Run:
@@ -15,7 +15,7 @@ Run:
 	sh set_java_path.sh
 
 ### Run experiments
-Place data to hdfs:
+Place data on hdfs:
 
 	hdfs fs -put [DATA.csv] [HDFS_PATH]
 	
