@@ -93,7 +93,7 @@ Sample result files for the example dataset, as well as the corresponding result
 
 # Contact
 
-Please submit any issues with the code to Prem Timsina (prem.timsina@mssm.edu), Linhua Wang (linhuaw15213@gmail.com) and Gaurav Pandey (gaurav.pandey@mssm.edu).
+Please submit any issues with the code through the "Issues" functionality and/or via email to Prem Timsina (prem.timsina@mssm.edu), Linhua Wang (linhuaw15213@gmail.com) and Gaurav Pandey (gaurav.pandey@mssm.edu).
 
 # Reference
 
