@@ -91,10 +91,10 @@ Start with:
 	
 Sample result files for the example dataset, as well as the corresponding result figures included in our paper, are available in the Analysis directory.
 
-### Contact
+# Contact
 
 Please submit any issues with the code to Prem Timsina (prem.timsina@mssm.edu), Linhua Wang (linhuaw15213@gmail.com) and Gaurav Pandey (gaurav.pandey@mssm.edu).
 
-### Reference
+# Reference
 
 Forthcoming.
