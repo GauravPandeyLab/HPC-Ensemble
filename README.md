@@ -1,4 +1,6 @@
-Below, we provide code and instructions for running our heterogeneous ensemble frameworks on Hadoop and traditional high-performance computing platforms, as well as evaluating their computational performance. 
+Below, we provide code and instructions for running our heterogeneous ensemble frameworks on Hadoop and traditional high-performance computing platforms, as well as evaluating their computational performance. This material is associated with our following paper:
+
+Linhua Wang, Prem Timsina and Gaurav Pandey, "Computational performance of heterogeneous ensemble frameworks on high-performance computing platforms", under review, 2020.
 
 # Run ensemble models on Hadoop
 
@@ -29,9 +31,9 @@ To run the Hadoop DataSink version, implemented in Spark, with the specified num
 
 ### To generate computational performance statistics
 The above command will generate the mprof file, which contains the memory usage per second. Elapsed time and CPU time can be obtained from this file.
-Elapsed time will also be generated via python time package and written into the TimeCal folder. 
+Elapsed time will also be generated via the python time package and written into the TimeCal folder. 
 
-To get disk usage:
+To get disk space consumption, use:
 	
 	sh get_disk_usage.sh
 
@@ -46,7 +48,7 @@ Start with:
 ### Setup
 Install LargeGOPred (https://github.com/linhuawang/LargeGOPred), which is an implementation of the DataSink framework designed to run on large-scale traditional HPC systems like Minerva.
 
-### To run experiments in our study
+### To run experiments reported in our study
 Follow the instructions of LargeGOPred to run it for the dataset under consideration. An example dataset for testing the code is available as Process/ExampleData/pf1.csv. Other datasets used in our study are available upon request.
 
 ### To generate computational performance statistics
@@ -73,20 +75,20 @@ Start with:
 1. Computational time 
 
 	i. Use notebook "Computational time.ipynb" to analyze computational time.  
-	ii. Minerva time usage is saved in: Minerva_results/minerva-all-usage.csv.  
-	iii. PDFs for all time usage is saved in Minerva_results/individual_data_time.  
-	iv. PDFs for figure in the paper is saved at paper_figures/Figure_2a/b.pdf.  
+	ii. A sample Minerva time usage file is saved in Minerva_results/minerva-all-usage.csv.  
+	iii. PDFs for all time usage figures are saved in the Minerva_results/individual_data_time.  
+	iv. The figures in the paper is saved at paper_figures/Figure_2a/b.pdf.  
 
 2. Disk usage 
 
-	i. Minerva disk usage is manually calculated using linux du -hs command.  
+	i. Minerva disk usage is calculated using the 'linux du -hs' command.  
 	ii. Demeter disk usage is calculated using 'hdfs dfs -ls -R' command.  
 	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the barplot.  
 	iv. Plot saved in paper_figures/Figure3_disk_usage.pdf.   
 
 3. Memory usage 
 
-	i. For Minerva, raw data is saved in Minerva_results/minerva-all-usage.csv, unit is MB. Plot is saved as paper_results/Figure_4a_Minerva_memory.pdf.  
+	i. For Minerva, the raw data are saved in the Minerva_results/minerva-all-usage.csv file, the unit is MB. The plot of memory usage is saved as paper_results/Figure_4a_Minerva_memory.pdf.  
 	ii. For Demeter, raw data is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.  csv, unit is MB. Plot is saved as paper_results/Figure_4b_Demeter_memory.pdf.  
 	
 Sample result files for the example dataset, as well as the corresponding result figures included in our paper, are available in the Analysis directory.
@@ -94,7 +96,3 @@ Sample result files for the example dataset, as well as the corresponding result
 # Contact
 
 Please submit any issues with the code through the "Issues" functionality and/or via email to Prem Timsina (prem.timsina@mssm.edu), Linhua Wang (linhuaw15213@gmail.com) and Gaurav Pandey (gaurav.pandey@mssm.edu).
-
-# Reference
-
-Forthcoming.
