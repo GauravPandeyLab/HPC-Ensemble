@@ -49,7 +49,7 @@ Start with:
 Install LargeGOPred (https://github.com/linhuawang/LargeGOPred), which is an implementation of the DataSink framework designed to run on large-scale traditional HPC systems like Minerva.
 
 ### To run experiments reported in our study
-Follow the instructions of LargeGOPred to run it for the dataset under consideration. An example dataset for testing the code is available as Process/ExampleData/pf1.csv. Other datasets used in our study are available upon request.
+Follow the instructions of LargeGOPred to run it for the dataset under consideration. An example dataset for testing the code is available as Process/ExampleData/pf1.arff. Other datasets used in our study are available upon request.
 
 ### To generate computational performance statistics
 
