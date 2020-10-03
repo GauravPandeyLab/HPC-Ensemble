@@ -75,13 +75,13 @@ Start with:
 1. Computational time 
 
 	i. Use notebook "Computational time.ipynb" to analyze computational time.  
-	ii. A sample Minerva time usage file is saved in Minerva_results/minerva-all-usage.csv.  
-	iii. PDFs for all time usage figures are saved in the Minerva_results/individual_data_time.  
+	ii. Minerva time usage file is saved as Minerva_results/minerva-all-usage.csv.  
+	iii. Demeter time usage file is saved as Demeter_results/demeter_spark_comprehensive_stats_all_data.csv
 	iv. The figures in the paper is saved at paper_figures/Figure_2a/b.pdf.  
 
 2. Disk usage 
 
-	i. Minerva disk usage is calculated using the 'linux du -hs' command.  
+	i. Minerva disk usage is calculated using the linux 'du -hs' command.  
 	ii. Demeter disk usage is calculated using 'hdfs dfs -ls -R' command.  
 	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the barplot.  
 	iv. Plot saved in paper_figures/Figure3_disk_usage.pdf.   
