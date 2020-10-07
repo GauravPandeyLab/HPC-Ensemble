@@ -90,9 +90,9 @@ Start with:
 
 3. Memory usage 
 	
-	i. For Minerva, the raw data are saved in the Minerva_results/minerva-all-usage.csv file, the unit is MB.
-	ii. For Demeter, raw data are saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. 
-	iii. The Jupyter notebook "Memory usage.ipynb" is used to generate the memory usage plots used in the paper.
+	i. For Minerva, the raw data are saved in the Minerva_results/minerva-all-usage.csv file, the unit is MB.   
+	ii. For Demeter, raw data are saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv, unit is MB.   
+	iii. The Jupyter notebook "Memory usage.ipynb" is used to generate the memory usage plots used in the paper.   
 	iv. The memory usage plot for Minerva is saved as paper_figures/Figure_4a_Minerva_memory.pdf.  
 	v. The memory usage plot for Demeter is saved as paper_figures/Figure_4b_Demeter_memory.pdf.  
 	
