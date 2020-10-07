@@ -33,9 +33,11 @@ To run the Hadoop DataSink version, implemented in Spark, with the specified num
 The above command will generate the mprof file, which contains the memory usage per second. Elapsed time and CPU time can be obtained from this file.
 Elapsed time will also be generated via the python time package and written into the TimeCal folder. 
 
-To get disk space consumption, use:
+The disk space consumption is calcualted using:
 	
 	sh get_disk_usage.sh
+
+The code for these computations is already included in the sparkSubmitYarn.py script referred to above.
 
 # Run ensembles on a traditional high-performance computing (HPC) system
 
@@ -75,15 +77,15 @@ Start with:
 1. Computational time 
 
 	i. Use notebook "Computational time.ipynb" to analyze computational time.  
-	ii. Minerva time usage file is saved in Minerva_results/minerva-all-usage.csv.  
-	iii. Demeter time usage file is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv
+	ii. A sample Minerva time usage file is saved in Minerva_results/minerva-all-usage.csv.  
+	iii. A sample Demeter time usage file is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv
 	iv. The figures in the paper is saved at paper_figures/Figure_2a/b.pdf.  
 
 2. Disk usage 
 
-	i. Minerva disk usage is calculated using the linux 'du -hs' command.  
-	ii. Demeter disk usage is calculated using 'hdfs dfs -ls -R' command.  
-	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the barplot.  
+	i. Minerva disk usage for tasks is calculated using the linux 'du -hs' command.  
+	ii. Demeter disk usage for tasks is calculated using 'hdfs dfs -ls -R' command.  
+	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the result barplot.  
 	iv. Plot saved in paper_figures/Figure3_disk_usage.pdf.   
 
 3. Memory usage 
@@ -91,8 +93,8 @@ Start with:
 	i. For Minerva, the raw data are saved in the Minerva_results/minerva-all-usage.csv file, the unit is MB. 
 	ii. For Demeter, raw data is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. 
 	iii. Jupyter notebook "Memory usage.ipynb" is used to generate the memory usage plots used in the paper.
-	iv. The memory usage plot for Minerva is saved as paper_results/Figure_4a_Minerva_memory.pdf.  
-	v. The memory usage plot for Demeter is saved as paper_results/Figure_4b_Demeter_memory.pdf.  
+	iv. The memory usage plot for Minerva is saved as paper_figures/Figure_4a_Minerva_memory.pdf.  
+	v. The memory usage plot for Demeter is saved as paper_figures/Figure_4b_Demeter_memory.pdf.  
 	
 Sample result files for the example dataset, as well as the corresponding result figures included in our paper, are available in the Analysis directory.
 
