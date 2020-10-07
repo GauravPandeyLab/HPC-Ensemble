@@ -37,7 +37,7 @@ The disk space consumption is calcualted using:
 	
 	sh get_disk_usage.sh
 
-The code for these computations is already included in the sparkSubmitYarn.py script referred to above.
+The code for these computations is included in the sparkSubmitYarn.py script referred to above.
 
 # Run ensembles on a traditional high-performance computing (HPC) system
 
