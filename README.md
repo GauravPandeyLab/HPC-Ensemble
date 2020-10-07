@@ -83,14 +83,15 @@ Start with:
 
 2. Disk usage 
 
-	i. Minerva disk usage for tasks is calculated using the linux 'du -hs' command.  
-	ii. Demeter disk usage for tasks is calculated using 'hdfs dfs -ls -R' command.  
-	iii. Jupyter notebook "Disk usage.ipynb" is used to generate the result barplot.  
+	i. Minerva disk usage for individual tasks is calculated using the linux 'du -hs' command.  
+	ii. Demeter disk usage for individual tasks is calculated using 'hdfs dfs -ls -R' command.  
+	iii. Jupyter notebook "Disk usage.ipynb" is used to analyze the disk usage and generate the result barplot.  
 	iv. Plot saved in paper_figures/Figure3_disk_usage.pdf.   
 
 3. Memory usage 
 	
-	i. For Minerva, the raw data are saved in the Minerva_results/minerva-all-usage.csv file, the unit is MB. 
+	i. For Minerva, the raw data are saved in the Minerva_results/minerva-all-usage.csv file, the unit is MB.
+	
 	ii. For Demeter, raw data is saved in Demeter_results/demeter_spark_comprehensive_stats_all_data.csv, unit is MB. 
 	iii. Jupyter notebook "Memory usage.ipynb" is used to generate the memory usage plots used in the paper.
 	iv. The memory usage plot for Minerva is saved as paper_figures/Figure_4a_Minerva_memory.pdf.  
